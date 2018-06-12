@@ -1,5 +1,5 @@
 (function() {
-	angular.module("ckeditor-plugins_2.0.0")
+	angular.module("ckeditor-plugins_2.1.0")
 		.factory("ckeditorPluginImageSlider", [
 
 			"CKEditorConfigPack",
@@ -28,12 +28,12 @@
 					container.$.className = containerClass;
 
 					container.setHtml(_.map(data.images, function(image) {
-						var uuid = image.value.original.asset.uuid;
-						var copyright = image.value.meta.copyright;
-						var description = image.value.meta.description;
-						var title = image.value.meta.title;
-						var croppedUrl = addPrecedingSlash(image.value.cropped.asset.url);
-						var originalUrl = image.value.original.asset.url ? addPrecedingSlash(image.value.original.asset.url) : "/files/download/" + uuid;
+						var uuid = _.get(image, "value.original.asset.uuid", "");
+						var copyright = _.get(image, "value.meta.copyright", "");
+						var description = _.get(image, "value.meta.description", "");
+						var title = _.get(image, "value.meta.title", "");
+						var croppedUrl = addPrecedingSlash(_.get(image, "value.crops.default.asset.url", ""));
+						var originalUrl = _.get(image, "value.original.asset.url", "") ? addPrecedingSlash(_.get(image, "value.original.asset.url", "")) : "/files/download/" + uuid;
 
 						return [
 							"<div class=\"" + slideClass + "\"",
