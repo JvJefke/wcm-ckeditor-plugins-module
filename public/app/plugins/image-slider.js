@@ -1,5 +1,5 @@
 (function() {
-	angular.module("ckeditor-plugins_2.1.0")
+	angular.module("ckeditor-plugins_2.1.1")
 		.factory("ckeditorPluginImageSlider", [
 
 			"CKEditorConfigPack",
@@ -123,7 +123,7 @@
 												},
 												original: {
 													asset: {
-														url: img.getAttribute("data-original-src"),
+														url: removePrecedingSlash(img.getAttribute("data-original-src")),
 														uuid: img.getAttribute("data-uuid"),
 													},
 												},
