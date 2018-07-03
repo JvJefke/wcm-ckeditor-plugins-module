@@ -1,7 +1,7 @@
 "use-strict";
 
 (function(CKEDITOR) {
-	angular.module("ckeditor-plugins_2.1.1")
+	angular.module("ckeditor-plugins_2.1.2")
 		.factory("ckeditorPluginCallToAction", [
 
 			"CKEditorConfigPack",
@@ -93,10 +93,10 @@
 											id: "target",
 											label: "Target",
 											validate: CKEDITOR.dialog.validate.notEmpty("Target cannot be empty!"),
-											default: "_self",
+											default: "_blank",
 											items: [
-												["Self (default)", "_self"],
-												["Blank", "_blank"],
+												["Blank (default)", "_blank"],
+												["Self", "_self"],
 											],
 											setup: function(widget) {
 												this.setValue(widget.data.target);
