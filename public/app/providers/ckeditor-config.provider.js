@@ -1,13 +1,13 @@
 "use strict";
 
-angular.module("ckeditor-plugins_2.1.2")
+angular.module("ckeditor-plugins_2.1.3")
 	.provider("CKEditorConfigPack", [
 		"MODULE_ENV_CONFIG",
 
 		function membersConfig(MODULE_ENV_CONFIG) {
 			this.API = {
 				name: MODULE_ENV_CONFIG.angularModule,
-				version: "2.1.2",
+				version: "2.1.3",
 				feDirPath: MODULE_ENV_CONFIG.feDirPath,
 				assetsDirPath: MODULE_ENV_CONFIG.assetsDirPath,
 				cssDirPath: MODULE_ENV_CONFIG.cssDirPath,

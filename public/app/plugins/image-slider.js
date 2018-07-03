@@ -1,5 +1,5 @@
 (function() {
-	angular.module("ckeditor-plugins_2.1.2")
+	angular.module("ckeditor-plugins_2.1.3")
 		.factory("ckeditorPluginImageSlider", [
 
 			"CKEditorConfigPack",
